@@ -23,7 +23,7 @@ q_movies[['title', 'vote_count', 'vote_average', 'score']].head(10)
 pop= df2.sort_values('popularity', ascending=False)
 import matplotlib.pyplot as plt
 plt.figure(figsize=(12,4))
-
+#plotting in a graph
 plt.barh(pop['title'].head(6),pop['popularity'].head(6), align='center',
         color='skyblue')
 plt.gca().invert_yaxis()
