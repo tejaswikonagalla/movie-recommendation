@@ -5,3 +5,9 @@ df2=pd.read_csv('movies.csv')
 df1.columns = ['id','tittle','cast','crew']
 df2= df2.merge(df1,on='id')
 df2.head(5)
+C= df2['vote_average'].mean()
+C
+m= df2['vote_count'].quantile(0.9)
+m
+q_movies = df2.copy().loc[df2['vote_count'] >= m]
+q_movies.shape
